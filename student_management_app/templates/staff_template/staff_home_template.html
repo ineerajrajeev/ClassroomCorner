@@ -1,0 +1,103 @@
+{% extends 'staff_template/base_template.html' %}
+
+{% block page_title %}
+    Staff Home
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->            
+          <div class="row">
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Students</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ student_count }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                        <i class="ni ni-active-40"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-nowrap"><a href="{% url 'staff_take_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Attendance Taken</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ staff_count }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                        <i class="ni ni-chart-pie-35"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <a href="{% url 'staff_take_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Subjects</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ subject_count }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                        <i class="ni ni-money-coins"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-nowrap"><a href="{% url 'staff_take_attendance' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+              <div class="card card-stats">
+                <!-- Card body -->
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Leave Taken</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ leave_count }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                        <i class="ni ni-chart-bar-32"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-sm">
+                    <span class="text-nowrap"><a href="{% url 'staff_apply_leave' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}

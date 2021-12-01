@@ -13,7 +13,7 @@ SECRET_KEY = '(i#*06f#keydy_fh17bf=$0f6v)^wr^l7*u4gq42m*sztu#2_m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['clasroomcorner.westus2.cloudapp.azure.com','localhost','127.0.0.1','0.0.0.0']
+ALLOWED_HOSTS = ['classroomcorner.westus2.cloudapp.azure.com','localhost','127.0.0.1','0.0.0.0','20.94.238.1']
 # Application definition
 
 INSTALLED_APPS = [
